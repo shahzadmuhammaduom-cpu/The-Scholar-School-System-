@@ -4,13 +4,13 @@
 body { background: linear-gradient(to bottom, #87CEEB 0%, #E0F6FF 100%); color: #222; }
 
 header {
-  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), 
-              url('header-bg.jpg') no-repeat center center/cover;
+  background: linear-gradient(rgba(0, 42, 94, 0.85), rgba(0, 42, 94, 0.85)), 
+              url('school1.jpg') no-repeat center/cover;
   color: white; 
   text-align: center; 
-  padding: 140px 20px;
+  padding: 120px 20px;
   font-family: 'Times New Roman', Times, serif;
-  position: relative;
+}
 }
 
 /* LOGO KO AAGEY LANA */
