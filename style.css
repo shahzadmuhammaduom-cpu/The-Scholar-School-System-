@@ -42,8 +42,15 @@ header {
   background: linear-gradient(-45deg, #1e3a8a, #2563eb, #0ea5e9, #38bdf8);
   background-size: 400% 400%;
   animation: skyChange 10s ease infinite;
-  padding: 80px 20px; /* padding barha di */
+  padding: 60px 20px;
   text-align: center;
+}
+
+@keyframes skyChange {
+ 0% { background-position: 0% 50%; }
+ 50% { background-position: 100% 50%; }
+ 100% { background-position: 0% 50%; }
+}
 }
 }
 }
@@ -154,20 +161,20 @@ header {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
 }
-/* TEXT COLOR CHANGE ANIMATION - ONE BY ONE */
+/* TEXT COLOR ANIMATION */
 header h1 {
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: 900;
   background: linear-gradient(90deg, #ffffff, #60a5fa, #38bdf8, #fbbf24, #ffffff);
   background-size: 300% 300%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  animation: textColorFlow 6s ease infinite;
+  animation: textColorFlow 5s ease infinite;
 }
 
 @keyframes textColorFlow {
-  0% { background-position: 0% 50%; }
+ 0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
