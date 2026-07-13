@@ -154,3 +154,20 @@ header {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
 }
+/* TEXT COLOR CHANGE ANIMATION - ONE BY ONE */
+header h1 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  background: linear-gradient(90deg, #ffffff, #60a5fa, #38bdf8, #fbbf24, #ffffff);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: textColorFlow 6s ease infinite;
+}
+
+@keyframes textColorFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
