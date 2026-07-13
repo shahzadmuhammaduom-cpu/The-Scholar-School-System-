@@ -4,24 +4,60 @@
 body { background: linear-gradient(to bottom, #87CEEB 0%, #E0F6FF 100%); color: #222; }
 
 header {
-  background: linear-gradient(rgba(0, 42, 94, 0.85), rgba(0, 42, 94, 0.85)), 
-              url('school1.jpg') no-repeat center/cover;
-  color: white; 
-  text-align: center; 
+  /* BUILDING BACKGROUND + BLUE OVERLAY */
+  background: 
+    linear-gradient(rgba(37, 99, 235, 0.75), rgba(14, 165, 233, 0.75)),
+    url('building.jpg') center/cover no-repeat;
+  
+  background-attachment: fixed; /* Scroll par effect */
   padding: 120px 20px;
-  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+  color: white;
+  position: relative;
 }
+}
+}
+/* BARA LOGO + ROTATE + GLOW */
+.logo-animated {
+  width: 230px; /* Bara kar diya */
+  height: 230px;
+  border-radius: 50%;
+  background: white;
+  padding: 12px;
+  margin-bottom: 30px;
+  border: 4px solid #38bdf8; /* Blue border */
+  box-shadow: 0 0 50px rgba(56, 189, 248, 0.7); /* Blue glow */
+  
+  animation: logoRotate 10s linear infinite; /* Slow ghoomna */
 }
 
-/* LOGO ANIMATION - BARA + CIRCLE + GHOMNA */
-.logo-animated {
-  width: 200px; /* Bara size */
-  height: 200px;
-  border-radius: 50%; /* Perfect Circle */
-  background: white;
-  padding: 10px; /* White border */
-  margin-bottom: 25px;
-  box-shadow: 0 0 30px rgba(255, 255, 255, 0.6); /* Glow */
+/* LOGO ROTATE ANIMATION */
+@keyframes logoRotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* TEXT BHI CLEAR KAREIN */
+header h1 {
+  font-size: 3.2rem;
+  font-weight: 900;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.6); /* Text par shadow */
+}
+
+header p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .logo-animated {
+    width: 160px;
+    height: 160px;
+  }
+  header h1 { font-size: 2.2rem; }
+}
   
   /* Animation */
   animation: logoSpin 8s linear infinite;
